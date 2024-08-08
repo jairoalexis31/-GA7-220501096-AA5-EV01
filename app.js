@@ -8,6 +8,11 @@ app.use(express.json());
 
 const users = []; // Aquí se almacenarán los usuarios de ejemplo
 
+// Ruta para verificar el funcionamiento del servidor
+app.get('/', (req, res) => {
+  res.send('Servidor funcionando correctamente');
+});
+
 // Ruta para registrar un nuevo usuario
 app.post('/register', async (req, res) => {
   try {
